@@ -1,54 +1,64 @@
-// .visually-hidden {
-// 	position: absolute !important;
-// 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-// 	clip: rect(1px, 1px, 1px, 1px);
-// 	padding:0 !important;
-// 	border:0 !important;
-// 	height: 1px !important; 
-// 	width: 1px !important; 
-// 	overflow: hidden;
-// }
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
 
-// html,
-// body {
-//     height: 100%;
-// }
+html,
+body {
+    height: 100%;
+}
 
-// .main {
-//     flex-grow: 1;
-// }
+.main {
+    flex-grow: 1;
+}
 
-// body {
-//     // font-family: $Rubik;
-//     // font-weight: $fw400;
-//     font-size: 16px;
-//     background-color: #fff;
-//     // color: $global;
-//     display: flex;
-//     flex-direction: column;
+body {
+    font-family: $Montserrat;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    background-color: $bg-color;
+    color: $global;
+    display: flex;
+    flex-direction: column;
 //     counter-reset: m-counter;
 //     @include max($lg) {
 //         // line-height: 1.5;
 //         // font-size: 16px;
 //     }
-// }
+}
 
-// .container {
-//     max-width: 1200px;
-//     padding: 0 15px;
-//     margin: 0 auto;
-//     &--fluid {
-//         max-width: 1800px;
-//     }
-//     @include max($s) {
-//         padding: 0 10px;
-//     }
-// }
+.container {
+    max-width: 1100px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
 
+.link {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 700;
+    background-color: $link-bc;
+    border-radius: 37px;
+    padding: 22px 40px;
+    line-height: 1;
+    outline: transparent;
+    @include lineClamp;
+    -webkit-line-clamp: 1;
+    &:hover {
+
+    }
+}
 //  @include max($lg) {
 //         padding-top: 53px;
 //     }
 
 
-//   @include lineClamp;
-        // -webkit-line-clamp: 2;
+// @include lineClamp;
+// -webkit-line-clamp: 2;
