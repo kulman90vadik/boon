@@ -9,12 +9,17 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    @include('./header.html')
-    @include('./home.html')
+    @include('./components/header.html')
+    @include('./components/home.html')
     <main class="main">
-
+        @include('./components/home/discount.html')
+        @include('./components/home/about.html')
+        @include('./components/home/gallery.html')
+        @include('./components/home/choice.html')
+        @include('./components/home/delivery.html')
+        @include('./components/home/my-bouquet.html')
     </main>
-
+    @include('./components/footer.html')
     <script src="js/main.min.js"></script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 .home {
     @include bg;
+    background-position: bottom;
     &__inner {
         height: 100vh;
         max-width: 710px;

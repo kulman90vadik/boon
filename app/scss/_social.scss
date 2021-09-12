@@ -1,0 +1,29 @@
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+    &__item {
+        &:not(:last-child) {
+            margin-right: 16px;
+        }
+    }
+    &__link {
+        outline: transparent;
+        &:hover .social__icon {
+            fill: $global;
+        }
+        &:focus .social__icon {
+            fill: $link-bc;
+        }
+        &:active .social__icon {
+            fill: $pink;
+        }
+    }
+    &__icon {
+        fill: #EB8671;
+        transition: fill 0.3s ease-in;
+        width: 44px;
+        height: 44px;
+    }
+}

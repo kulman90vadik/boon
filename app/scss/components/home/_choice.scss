@@ -1,0 +1,54 @@
+.choice {
+    padding-bottom: 80px;
+    position: relative;
+    overflow: hidden;
+    &__title {
+        font-size: 36px;
+        margin-bottom: 27px;
+        padding-left: 54px;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: '';
+            width: 45px;
+            height: 44px;
+            @include bg;
+            background-image: url(../images/choice-title-decor.png);
+            left: 0;
+        }
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-bottom: 25px;
+        grid-gap: 20px 10px;
+    }
+    &__link {
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+        color: #8E8D6F;
+        outline: transparent;
+        transition: color 0.3s ease-in;
+        &:hover {
+            color: $global;
+        }
+        &:focus {
+            color: $link-bc;
+        }
+        &:active {
+            color: $pink;
+        }
+    }
+    &::after {
+        width: 83px;
+        height: 107px;
+        position: absolute;
+        content: '';
+        left: 400px;
+        @include bg;
+        background-image: url(../images/choice-decor.png);
+        bottom: -35px;
+    }
+}

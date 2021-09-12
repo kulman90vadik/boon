@@ -1,5 +1,6 @@
 .header {
     position: fixed;
+    z-index: 100;
     width: 100%;
     background-color: $bg-color;
     &__inner {
@@ -9,13 +10,21 @@
         padding: 8px 0;
     }
     &__btn {
+        position: relative;
+        width: 25px;
         border: none;
         padding: 0;
         background-color: transparent;
         cursor: pointer;
         outline: transparent;
-        &:hover {
-
+        &:hover .header__btn-item {
+            background-color: $link-bc;
+        }
+        &:focus .header__btn-item {
+            background-color:#7c7c7c;
+        }
+        &:active .header__btn-item {
+            background-color: $global;
         }
     }
     &__btn-item {
@@ -23,8 +32,24 @@
         width: 25px;
         height: 1px;
         background-color: #000;
+        transition: background-color 0.2s ease-in, transform 0.3s ease-in;
         &:not(:last-child) {
-            margin-bottom: 12px;
+            margin-bottom: 6px;
+        }
+        &--active {
+            position: absolute;
+            transition: transform 0.3s ease-in;
+            &:nth-child(2) {
+                display: none;
+            }
+            &:nth-child(1) {
+                transform: rotate(45deg);
+                left: 0;
+            }
+            &:nth-child(3) {
+                transform: rotate(-45deg);
+                right: 0;
+            }
         }
     }
     &__list {
@@ -38,8 +63,14 @@
     }
     &__link {
         outline: transparent;
-        &:hover {
-
+        &:hover .header__icon{
+            fill: $link-bc;
+        }
+        &:focus .header__icon{
+            fill: #7c7c7c;
+        }
+        &:active .header__icon{
+            fill: $global;
         }
     }
     &__link-corb {
@@ -57,6 +88,7 @@
     }
     &__icon {
         fill: $pink;
+        transition: fill 0.3s ease-in;
     }
     &__user,
     &__search {
@@ -74,5 +106,108 @@
     &__images {
         width: 205px;
         height: 54px;
+    }
+}
+
+
+.menu {
+    position: absolute;
+    top: 70px;
+    transform: translateX(-300%);
+    max-width: 345px;
+    width: 100%;
+    transition: transform 0.3s ease-in;
+    &--active {
+        transform: translateX(0);
+    }
+    &__list {
+
+    }
+    &__item {
+        position: relative;
+        overflow: hidden;
+    }
+    &__head {
+        cursor: pointer;
+        position: relative;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #fff0e4;
+        border-bottom: 1px solid #EDD5C2;
+        padding: 20px;
+        color: #000;
+        font-size: 12px;
+        font-weight: 600;
+        transition: background-color 0.3s ease-in;
+        outline: transparent;
+        &:hover {
+            background-color: $link-bc;
+        }
+        &:focus {
+            background-color: $pink;
+        }
+        &:active {
+            background-color: $link-bc;
+        }
+    }
+    &__plus {
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        right: 20px;
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            background-color: #000;
+        }
+        &::after {
+            width: 100%;
+            height: 2px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &::before {
+            width: 2px;
+            height: 100%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: transform 0.3s ease-in;
+        }
+    }
+    &__minus {
+        &::before {
+            // display: none;
+            transform: rotate(90deg);
+            right: 0;
+
+        }
+    }
+    &__holder {
+        display: none;
+    }
+    &__link {
+        display: block;
+        background-color: #FFF6F1;
+        padding: 14px 20px;
+        font-size: 10px;
+        font-weight: 600;
+        color: #000;
+        border-bottom: 1px solid #EDD5C2;
+        outline: transparent;
+        transition: background-color 0.3s ease-in;
+        &:hover {
+            background-color: #ccc;
+        }
+        &:focus {
+            background-color: $link-bc;
+        }
+        &:active {
+            background-color: $pink;
+        }
     }
 }

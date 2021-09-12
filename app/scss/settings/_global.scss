@@ -35,7 +35,7 @@ body {
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -51,10 +51,31 @@ body {
     outline: transparent;
     @include lineClamp;
     -webkit-line-clamp: 1;
+    transition: background-color 0.3s ease-in;
     &:hover {
-
+        background-color: $global;
+    }
+    &:focus {
+        background-color: $link-bc;
+    }
+    &:active {
+        background-color: $pink;
     }
 }
+
+.title {
+    font-size: 54px;
+    color: #272626;
+    font-weight: 700;
+    @include lineClamp;
+    -webkit-line-clamp: 1;
+}
+
+
+
+
+
+
 //  @include max($lg) {
 //         padding-top: 53px;
 //     }

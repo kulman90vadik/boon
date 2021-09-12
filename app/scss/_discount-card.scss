@@ -1,0 +1,83 @@
+.discount-card {
+    max-width: 284px;
+    width: 100%;
+    padding: 9px 9px 35px;
+    background-color: #FDFDFD;
+    border-radius: 0px 20px 20px 20px;
+    &__photo {
+        position: relative;
+        margin-bottom: 10px;
+    }
+    &__images {
+        max-width: 266px;
+        width: 100%;
+        height: 245px;
+    }
+    &__sale {
+        position: absolute;
+        text-transform: uppercase;
+        text-align: center;
+        border-radius: 0 6px 6px 0;
+        font-size: 14px;
+        color: #fff;
+        padding: 4px 6px;
+        max-width: 115px;
+        width: 100%;
+        top: 5px;
+        left: -4px;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+    }
+    &__sale--hit {
+        background-color: #FD4F79;
+        margin-bottom: 2px;
+    }
+    &__sale--novelty {
+        background-color: #4AE950;
+        top: 32px;
+    }
+    &__sale--top {
+        background-color: #FD984F;
+        top: 59px;
+    }
+    &__sale--bottom {
+        background-color: #F1EB4C;
+        border-radius: 6px 0 0 6px;
+        right: -4px;
+        top: auto;
+        left: auto;
+        bottom: 5px;
+        color: #7EA048;
+    }
+    &__name {
+        font-size: 15px;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+    }
+    &__name--last {
+        margin-bottom: 50px;
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__price {
+        margin-right: 15px;
+    }
+    &__underline {
+        color: #8E8D6F;
+        font-size: 13px;
+        text-decoration-line: line-through;
+        display: block;
+        margin-bottom: 4px;
+    }
+    &__cost {
+        color: #7EA048;
+    }
+    &__link {
+        padding: 9px 33px;
+        font-weight: 600;
+        font-size: 18px;
+    }
+}

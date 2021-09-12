@@ -1,0 +1,112 @@
+.about {
+    margin-bottom: 80px;
+    &__title {
+        margin-bottom: 30px;
+    }
+    &__item {
+        position: relative;
+        display: flex;
+        margin-bottom: 15px;
+        &:nth-child(odd) {
+            justify-content: flex-end;
+        }
+        &:nth-child(even) {
+            margin-bottom: 65px;
+        }
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+            &::after,
+            &::before {
+                position: absolute;
+                content: '';
+                @include bg;
+            }
+        }
+        &:nth-child(1) {
+            &::after {
+                width: 164px;
+                height: 154px;
+                top: 60px;
+                left: 30%;
+                transform: rotate(-60deg);
+                background-image: url(../images/about-decor-1.png);
+            }
+            &::before {
+                width: 83px;
+                height: 107px;
+                bottom: 0;
+                left: -80px;
+                transform: rotate(-165deg);
+                background-image: url(../images/about-decor-2.png);
+            }
+        }
+        &:nth-child(2) {
+            &::after {
+                width: 83px;
+                height: 107px;
+                transform: rotate(180deg);
+                right: 0;
+                bottom: 0;
+                background-image: url(../images/about-decor-3.png);
+            }
+        }
+        &:nth-child(3) {
+            &::after {
+                z-index: -1;
+                left: 30%;
+                top: 120px;
+                width: 104px;
+                height: 98px;
+                background-image: url(../images/about-decor-4.png);
+            }
+        }
+    }
+    &__text {
+        position: absolute;
+        width: 100%;
+        font-size: 24px;
+        background-color: #FFF8F5;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 20px 0px 20px 20px;
+        p {
+            @include lineClamp;
+            -webkit-line-clamp: 6;
+        }
+    }
+    &__images {
+        width: 100%;
+        @include bg;
+    }
+    &__text--composition-1 {
+        max-width: 590px;
+        padding: 67px 50px;
+        bottom: 100px;
+        left: 230px;
+    }
+    &__images--composition-1 {
+        max-width: 563px;
+        height: 625px;
+    }
+    &__text--composition-2 {
+        max-width: 470px;
+        padding: 66px 35px;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__images--composition-2 {
+        max-width: 697px;
+        height: 390px;
+    }
+    &__text--composition-3 {
+        max-width: 566px;
+        padding: 96px 84px;
+        bottom: 100px;
+        left: 230px;
+    }
+    &__images--composition-3 {
+        max-width: 500px;
+        height: 551px;
+    }
+}
