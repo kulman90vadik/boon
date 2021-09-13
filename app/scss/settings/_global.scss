@@ -72,6 +72,28 @@ body {
 }
 
 
+.btn {
+    border: none;
+    cursor: pointer;
+    background-color: $link-bc;
+    border-radius: 21px;
+    padding: 9px 19px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 12px;
+    outline: transparent;
+    transition: background-color 0.3s ease-in;
+    &:hover {
+        background-color: $global;
+    }
+    &:focus {
+        background-color: $link-bc;
+    }
+    &:active {
+        background-color: $pink;
+    }
+}
+
 
 
 

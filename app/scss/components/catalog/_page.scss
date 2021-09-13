@@ -1,0 +1,33 @@
+.page {
+    position: relative;
+    margin-bottom: 80px;
+    padding-top: 20px;
+    &__wrapper {
+        display: flex;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px 11px;
+    }
+    &::after,
+    &::before {
+        position: absolute;
+        content: '';
+        @include bg;
+    }
+    &::after {
+        background-image: url(../images/discount-decor-1.png);
+        width: 45px;
+        height: 107px;
+        left: 0;
+        top: 77px;
+    }
+    &::before {
+        background-image: url(../images/discount-decor-2.png);
+        width: 65px;
+        height: 99px;
+        right: 0;
+        top: 222px;
+    }
+}

@@ -17,8 +17,15 @@ $(function(){
         arrows: false
     });
 
-
-
-
+     $(".js-range-slider").ionRangeSlider({
+        onStart: function (data) {
+            $('.sidebar__price-min').text(data.from);
+            $('.sidebar__price-max').text(data.to);
+        },
+        onChange: function (data) {
+            $('.sidebar__price-min').text(data.from);
+            $('.sidebar__price-max').text(data.to);
+        }
+    });
 
 });

@@ -1,0 +1,34 @@
+.breadcrumbs {
+    display: flex;
+    &__item {
+        padding-right: 11px;
+        position: relative;
+        &:not(:last-child) {
+            margin-right: 5px;
+            &::after {
+                position: absolute;
+                content: '/';
+                color: #8E8D6F;
+                right: 0;
+            }
+        }
+    }
+    &__link {
+        font-weight: 600;
+        font-size: 18px;
+        color: #8E8D6F;
+        outline: transparent;
+        transition: color 0.3s ease-in;
+        &:not(.breadcrumbs__link--active) {
+            &:hover {
+                color: $global;
+            }
+            &:focus {
+                color: $link-bc;
+            }
+            &:active {
+                color: $pink;
+            }
+        }
+    }
+}
