@@ -1,4 +1,15 @@
-<header class="header">
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="shortcut icon" href="../images/logo-title.png" type="image/png">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <header class="header">
     <div class="container">
         <div class="header__inner">
             <nav class="menu">
@@ -122,3 +133,33 @@
         </div>
     </div>
 </header>
+    <section class="home login" style="background-image: url(../images/home-bg.jpg);">
+        <div class="container">
+            <div class="home__inner login__inner">
+                <div class="login__form">
+                    <h2 class="login__title">Регистрация</h2>
+                    <span class="login__text">Есть аккаунт?</span>
+                    <a class="login__link" href="login.html">Войдите</a>
+                    <form class="login-form" action="#">
+                        <label class="login-form__label">
+                            <input class="login-form__input" type="tel" name="телефон" placeholder="Телефон" required>
+                        </label>
+                        <label class="login-form__label">
+                            <input class="login-form__input" type="text" name="Имя" placeholder="Имя" required>
+                        </label>
+                        <label class="login-form__label">
+                            <input class="login-form__input" type="email" name="email" placeholder="E-mail" required>
+                        </label>
+                        <label class="login-form__label login-form__label--password">
+                            <input class="login-form__input login-form__input--password" type="password" name="пароль" placeholder="Пароль" required>
+                            <div class="login-form__icon login-form__icon--active" aria-label="картинка показа скрытого пароля"></div>
+                        </label>
+                        <button class="login-form__btn login-form__registration-btn btn" type="submit">Зарегистрироваться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/main.min.js"></script>
+</body>
+</html>

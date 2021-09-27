@@ -1,4 +1,5 @@
 .discount {
+    padding-top: 50px;
     margin-bottom: 80px;
     position: relative;
     &__title {
@@ -48,7 +49,7 @@
     }
     &::after {
         left: 0;
-        top: 0;
+        top: 30px;
         width: 45px;
         height: 107px;
         background-image: url(../images/discount-decor-1.png);

@@ -12,6 +12,7 @@
     &__btn {
         position: relative;
         width: 25px;
+        height: 25px;
         border: none;
         padding: 0;
         background-color: transparent;
@@ -81,7 +82,11 @@
         color: #fff0e4;
         background-color: $pink;
         border-radius: 50%;
-        padding: 2px 4px;
+        width: 22px;
+        height: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         right: 0;
         top: -27px;
         font-size: 15px;
@@ -98,6 +103,10 @@
     &__corb {
         width: 45px;
         height: 32px;
+    }
+    &__login {
+        width: 34px;
+        height: 45px;
     }
 }
 
@@ -119,9 +128,6 @@
     transition: transform 0.3s ease-in;
     &--active {
         transform: translateX(0);
-    }
-    &__list {
-
     }
     &__item {
         position: relative;

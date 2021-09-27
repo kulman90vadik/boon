@@ -1,0 +1,206 @@
+.identity {
+    position: relative;
+    &__wrapper {
+        height: 100vh;
+        padding-top: 80px;
+        display: flex;
+    }
+    &__inner {
+        width: 100%;
+    }
+    &__breadcrumbs {
+        margin-bottom: 15px;
+    }
+    &__title {
+        margin-bottom: 30px;
+        display: block;
+        font-weight: 600;
+        font-size: 36px;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+    }
+    &__form {
+        max-width: 825px;
+        width: 100%;
+    }
+    &__list {
+        margin-bottom: 40px;
+    }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+    &__label {
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+        font-size: 24px;
+        color: #000;
+    }
+    &__input {
+        max-width: 690px;
+        width: 100%;
+        background-color: #FFF8F5;
+        height: 31px;
+        padding: 2px 15px;
+        outline: transparent;
+        border: none;
+        border-radius: 17px;
+        transition: background-color 0.2s ease-in;
+        &::placeholder {
+            color: #8E8D6F;
+            font-size: 18px;
+            font-weight: 400;
+            font-family: $SourceSansPro;
+        }
+        &:focus {
+            background-color: $link-bc;
+        }
+    }
+    &__btn {
+        padding: 22px 78px;
+        border-radius: 37px;
+        font-weight: 600;
+        font-size: 24px;
+    }
+    &::after,
+    &::before {
+        position: absolute;
+        content: '';
+        @include bg;
+    }
+    &::after {
+        left: 0;
+        top: 40px;
+        width: 45px;
+        height: 107px;
+        background-image: url(../images/discount-decor-1.png);
+    }
+    &::before {
+        right: 0;
+        top: 50%;
+        width: 65px;
+        height: 99px;
+        background-image: url(../images/discount-decor-2.png);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.identity-filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 40px;
+    background-color: #FFF6F2;
+    border-radius: 20px;
+    max-width: 235px;
+    max-height: 300px;
+    width: 100%;
+    padding: 25px;
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+    &__btn {
+        font-weight: 400;
+        font-family: $SourceSansPro;
+        background-color: transparent;
+        font-size: 18px;
+        color: #8E8D6F;
+        padding: 0;
+        margin: 0;
+        border: none;
+        cursor: pointer;
+        outline: transparent;
+        transition: color 0.3s ease-in;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+        &:hover {
+            color: $global;
+        }
+        &:focus {
+            color: $link-bc;
+        }
+        &:active {
+            color: $pink;
+        }
+    }
+    &__link {
+        color: #D7537A;
+        font-size: 18px;
+        font-weight: 400;
+        font-family: $SourceSansPro;
+        outline: transparent;
+        transition: color 0.3s ease-in;
+        &:hover {
+            color: $global;
+        }
+        &:focus {
+            color: rgb(155, 155, 155);
+        }
+        &:active {
+            color: rgb(197, 112, 112);
+        }
+    }
+}
+
+
+
+.identity-address {
+    &__title {
+        margin-bottom: 30px;
+        display: block;
+        font-weight: 600;
+        font-size: 36px;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+    }
+    &__list {
+        list-style-type: auto;
+    }
+    &__item {
+        margin-bottom: 15px;
+        color: #000;
+        font-size: 18px;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+    }
+    &__input {
+        height: 31px;
+        background-color: #FFF8F5;
+        border-radius: 17px;
+        outline: transparent;
+        padding: 0 15px;
+        width: 100%;
+        margin-bottom: 30px;
+        border: none;
+        color: #fff;
+        transition: background-color 0.3s ease-in;
+        &:focus {
+            background-color: $global;
+        }
+        &::placeholder {
+            color: #8E8D6F;
+            font-size: 18px;
+        }
+    }
+    &__btn {
+        padding: 22px 78px;
+        border-radius: 37px;
+        font-weight: 600;
+        font-size: 24px;
+    }
+}

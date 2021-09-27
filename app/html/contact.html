@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalog</title>
+    <title>Contact</title>
     <link rel="shortcut icon" href="../images/logo-title.png" type="image/png">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -13,27 +13,36 @@
     <section class="home" style="background-image: url(../images/home-bg.jpg);">
         <div class="container">
             <div class="home__inner home__inner--bottom">
-                <h1 class="home__title">Каталог</h1>
+                <h1 class="home__title">Контакты</h1>
                 <ul class="breadcrumbs">
                     <li class="breadcrumbs__item">
                         <a class="breadcrumbs__link" href="#">Главная</a>
                     </li>  
                     <li class="breadcrumbs__item">
-                        <a class="breadcrumbs__link" href="#">Каталог</a>
-                    </li>  
-                    <li class="breadcrumbs__item">
-                        <span class="breadcrumbs__link breadcrumbs__link--active">Букеты</span>
+                        <span class="breadcrumbs__link breadcrumbs__link--active">Контакты</span>
                     </li>  
                 </ul>
             </div>
         </div>
     </section>
     <main class="main">
-        @include('./components/catalog/page.html')
+
+        @include('./components/contact/map.html')
+        @include('./components/contact/question.html')
         @include('./components/catalog/classification.html')
 
     </main>
     @include('./components/footer.html')
+    <script src="https://maps.googleapis.com/maps/api/js?&callback=initMap&v=weekly" async></script>
+    <script>
+        let map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map-js"), {
+                center: { lat: 55.74947391010508, lng: 37.56143701747265 },
+                zoom: 14,
+            });
+        } 
+    </script>
     <script src="js/main.min.js"></script>
 </body>
 </html>

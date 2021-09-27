@@ -1,0 +1,109 @@
+.login {
+    &__inner {
+        max-width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    &__form {
+        max-width: 326px;
+        width: 100%;
+        background-color: #FFF0E4;
+        border-radius: 10px;
+        text-align: center;
+        padding: 30px 10px;
+    }
+    &__title {
+        margin-bottom: 23px;
+        font-weight: 700;
+        font-size: 18px;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+    }
+
+    &__link,
+    &__text {
+        font-family: $SourceSansPro;
+        font-weight: 400;
+        font-size: 12px;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+    }
+    &__link {
+        color: #FD4F79;
+        outline: transparent;
+        transition: color 0.3s ease-in;
+        &:hover {
+            color:rgba(0, 0, 0, 0.54);
+        }
+        &:focus {
+            color: rgb(155, 91, 91);
+        }
+        &:active {
+            color: #000;
+        }
+    }
+    & .login-form {
+        margin-top: 20px;
+        &__label {
+            margin-bottom: 10px;
+            display: block;
+        }
+        &__label--password {
+            position: relative;
+        }
+        &__icon {
+            position: absolute;
+            z-index: 100;
+
+            cursor: pointer;
+            right: 15px;
+            top: 16px;
+            width: 17px;
+            height: 13px;
+            background-image: url(../images/icons/eye.svg);
+            @include bg;
+        }
+        &__icon--active {
+            &::after {
+                position: absolute;
+                content: '';
+                width: 19px;
+                height: 2px;
+                transform: rotate(45deg);
+                top: 5px;
+                left: -1px;
+                background-color: $global;
+            }
+        }
+        &__input {
+            width: 100%;
+            background-color: #FFF8F5;
+            border-radius: 17px;
+            height: 45px;
+            border: none;
+            outline: transparent;
+            padding: 0 35px 0 20px;
+            transition: background-color 0.3s ease-in;
+            &:focus {
+                background-color: rgb(151, 151, 151);
+            }
+            &::placeholder {
+                font-size: 15px;
+                color: rgba(0, 0, 0, 0.54);
+                font-family: $SourceSansPro;
+                font-weight: 400;
+            }
+        }
+        &__btn {
+            margin-top: 25px;
+            padding: 10px 75px;
+            font-weight: 600;
+            font-family: $SourceSansPro;
+            font-size: 16px;
+        }
+        &__registration-btn {
+            padding: 10px;
+        }
+    }
+}

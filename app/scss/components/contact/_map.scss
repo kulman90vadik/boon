@@ -1,0 +1,123 @@
+.map {
+    position: relative;
+    padding-top: 50px;
+    margin-bottom: 80px;
+    &__inner {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        background-color: #FFF8F5;
+        border-radius: 20px;
+    }
+    & #map-js {
+        max-width: 558px;
+        width: 100%;
+        height: 480px;
+        margin-right: 50px;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        letter-spacing: 2px;
+        margin-bottom: 14px;
+        @include lineClamp;
+        -webkit-line-clamp: 2;
+    }
+    &__list {
+        margin-bottom: 16px;
+        &--search {
+            margin-bottom: 0;
+        }
+    }
+    &__item {
+        position: relative;
+        padding-left: 25px;
+        font-size: 18px;
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+    &__item-icon {
+        &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 3px;
+            width: 15px;
+            height: 15px;
+            @include bg;
+        }
+    }
+    &__item--phone {
+        &::after {
+            background-image: url(../images/tel.png);
+        }
+    }
+    &__item--email {
+        &::after {
+            background-image: url(../images/post.png);
+        }
+    }
+    &__item--map {
+        &::after {
+            background-image: url(../images/map.png);
+        }
+    }
+    &__item--clock {
+        display: flex;
+        &::after {
+            background-image: url(../images/clock.png);
+        }
+    }
+    &__link {
+        display: block;
+        outline: transparent;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+        transition: color 0.3s ease-in;
+        &:hover {
+            color: $pink;
+        }
+        &:focus {
+            color: $link-bc;
+        }
+        &:active {
+            color: #616161;
+        }
+    }
+    &__holder {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    &__subtitle {
+        font-size: 18px;
+        margin-right: 15px;
+    }
+    &__social {
+        margin-bottom: 0;
+    }
+    &__time {
+        display: block;
+    }
+    &::before,
+    &::after {
+        position: absolute;
+        content: '';
+        @include bg;
+    }
+    &::after {
+        background-image: url(../images/discount-decor-1.png);
+        left: 0;
+        top: 100px;
+        width: 45px;
+        height: 107px;
+    }
+    &::before {
+        background-image: url(../images/discount-decor-2.png);
+        right: 0;
+        bottom: 100px;
+        width: 65px;
+        height: 99px;
+    }
+}

@@ -10,6 +10,13 @@
         justify-content: center;
         align-items: flex-start;
     }
+    &__inner--bottom {
+        justify-content: flex-end;
+        padding-bottom: 25px;
+    }
+    &--catalog-card {
+        max-width: 860px;
+    }
     &__subtitle {
         font-size: 24px;
         display: block;

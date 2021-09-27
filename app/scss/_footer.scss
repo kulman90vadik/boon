@@ -39,13 +39,13 @@
 
         }
         &:hover {
-            color: $global;
+            color: $pink;
         }
         &:focus {
             color: $link-bc;
         }
         &:active {
-            color: $pink;
+            color: #616161;
         }
     }
     &__link--tel {
