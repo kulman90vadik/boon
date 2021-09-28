@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Identity</title>
+    <title>Basket</title>
     <link rel="shortcut icon" href="../images/logo-title.png" type="image/png">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -134,137 +134,80 @@
     </div>
 </header>
     <main class="main">
-        <section class="identity">
-            <h2 class="visually-hidden">Страница личного кабинета</h2>
+        <section class="home" style="background-image: url(../images/home-bg.jpg);">
             <div class="container">
-                <div class="identity__wrapper">
-                    
-                    <div class="identity-filter">
-                        <ul class="identity-filter__list">
-                            <li class="identity-filter__item">
-                                <button class="identity-filter__btn" type="submit" data-filter=".category-a">Личные данные</button>
-                            </li>
-                            <li class="identity-filter__item">
-                                <button class="identity-filter__btn" type="submit" data-filter=".category-b">Адресная книга</button>
-                            </li>
-                            <li class="identity-filter__item">
-                                <button class="identity-filter__btn" type="submit" data-filter=".category-c">Отзывы</button>
-                            </li>
-                        </ul>
-                        <a class="identity-filter__link" href="#">Выйти</a>
-                    </div>
-    
-                    <div class="identity__inner">
+                <div class="home__inner">
+                    <h1 class="home__title">Корзина</h1>
+                </div>
+            </div>
+        </section>      
 
-                        <div class="identity__items mix category-a">
-                            <ul class="breadcrumbs identity__breadcrumbs">
-                                <li class="breadcrumbs__item">
-                                    <a class="breadcrumbs__link" href="index.html">Главная</a>
-                                </li>  
-                                <li class="breadcrumbs__item">
-                                    <span class="breadcrumbs__link breadcrumbs__link--active">Личные данные</span>
-                                </li>  
-                            </ul>
-                            <span class="identity__title">Личные данные</span>
-                            <form class="identity__form" action="#">
-                                <ul class="identity__list">
-                                    <li class="identity__item">
-                                        <label class="identity__label" for="name">ФИО</label>
-                                        <input class="identity__input" type="text" placeholder="Лена Ленина" name="Имя" id="name">
-                                    </li>
-                                    <li class="identity__item">
-                                        <label class="identity__label" for="tel">Телефон</label>
-                                        <input class="identity__input" type="tel" placeholder="+749500000000" name="Телефон" id="tel">
-                                    </li>
-                                    <li class="identity__item">
-                                        <label class="identity__label" for="email">E-mail</label>
-                                        <input class="identity__input" type="email" placeholder="post@gmail.com" name="Почта" id="email">
-                                    </li>
-                                    <li class="identity__item">
-                                        <label class="identity__label" for="password">Пароль</label>
-                                        <input class="identity__input" type="password" placeholder="************" name="Пароль" id="password">
-                                    </li>
-                                </ul>
-                                <button class="identity__btn btn" type="submit">Сохранить</button>
-                            </form>
-                        </div>
-
-                        <div class="identity__items mix category-b">
-                            <ul class="breadcrumbs identity__breadcrumbs">
-                                <li class="breadcrumbs__item">
-                                    <a class="breadcrumbs__link" href="index.html">Главная</a>
-                                </li>  
-                                <li class="breadcrumbs__item">
-                                    <span class="breadcrumbs__link breadcrumbs__link--active">Адресная книга</span>
-                                </li>  
-                            </ul>
-                            
-                            <address class="identity-address">
-                                <form class="identity-address__form" action="#">
-                                    <span class="identity-address__title">Адреса доставки</span>
-                                    <ol class="identity-address__list">
-                                        <li class="identity-address__item">
-                                            Город, улица Название, дом 1
-                                        </li>
-                                        <li class="identity-address__item">
-                                            Город, улица Название, дом 1
-                                        </li>
-                                        <li class="identity-address__item">
-                                            Город, улица Название, дом 1
-                                        </li>
-                                    </ol>
-                                    <label class="visually-hidden" for="address">Текстовое поле, для добавления адреса</label>
-                                    <input class="identity-address__input" type="text" name="адрес" id="address" placeholder="Добавить адрес">
-                                    <button class="identity-address__btn btn" type="submit">Сохранить</button>
-                                </form>
-                            </address>
-                        </div>
-
-                        <div class="identity__items mix category-c">
-                            <ul class="breadcrumbs identity__breadcrumbs">
-                                <li class="breadcrumbs__item">
-                                    <a class="breadcrumbs__link" href="index.html">Главная</a>
-                                </li>  
-                                <li class="breadcrumbs__item">
-                                    <span class="breadcrumbs__link breadcrumbs__link--active">Отзывы</span>
-                                </li>  
-                            </ul>
-                            <span class="identity__title">Отзывы</span>
-                            <div class="identity-review">
-                                <ul class="identity-review__list">
-                                    <li class="identity-review__item">
-                                        <span class="identity-review__subtitle">
-                                            Отзыв о товаре №225 “Ромашки для Наташки”
-                                        </span>
-                                        <div class="identity-review__text">
-                                            <p>
-                                                Веб-дизайн — непростая сфера, провоцирующая постоянные споры. Кто-то скажет, что для привлечения внимания вашему лендингу просто необходим современный дизайн, включающий последние тенденции. Другие считают, что работающая посадочная страница, на которой посетители получают то, зачем пришли, гораздо важнее.
-                                            </p>
+        <section class="basket">
+            <div class="container">
+                <h2 class="visually-hidden">Детали заказа</h2>
+                <ul class="basket__list">
+                    <!-- <li class="basket__item">
+                        <article class="basket-card">
+                            <img class="basket-card__images" src="images/basket-card-1.jpg" alt="Букет ромашек">
+                            <div class="basket-card__content">
+                                <div class="basket-card__top">
+                                    <span class="basket-card__title">№225 “Ромашки для Наташки”</span>
+                                    <svg class="basket-card__icon" aria-label="Картинка удаление товара из корзины">
+                                        <use xlink:href="images/sprite.svg#urn"></use>
+                                    </svg>
+                                </div>
+                                <div class="basket-card__bottom">
+                                    <label class="visually-hidden" for="basket-number">Текстовое поле с возможностью добавления количества товара</label>
+                                    <input class="details__input" id="basket-number" type="number" name="number" value="1" min="1" max="7">
+                                    <div class="basket-card__price">
+                                        <div class="basket-card__old">
+                                            <span class="basket-card__price-numberOld">5400</span> 
+                                            <span>грн</span> 
                                         </div>
-                                        <time class="identity-review__time" datetime="2021-12-12 12:00">12:00 12.12.2021</time>
-                                    </li>
-                                    <li class="identity-review__item">
-                                        <span class="identity-review__subtitle">
-                                            Отзыв о товаре №225 “Ромашки для Наташки”
-                                        </span>
-                                        <div class="identity-review__text">
-                                            <p>
-                                                Веб-дизайн — непростая сфера, провоцирующая постоянные споры. Кто-то скажет, что для привлечения внимания вашему лендингу просто необходим современный дизайн, включающий последние тенденции. Другие считают, что работающая посадочная страница, на которой посетители получают то, зачем пришли, гораздо важнее.
-                                            </p>
+                                        <div class="basket-card__price-actual">
+                                            <span class="basket-card__price-number">3700</span> 
+                                            <span>грн</span> 
                                         </div>
-                                        <time class="identity-review__time" datetime="2021-12-12 12:00">12:00 12.12.2021</time>
-                                    </li>
-                                </ul>
+                                    </div>
+                                </div>
                             </div>
-                            
-                        </div>
+                        </article>
+                    </li> -->
+                    <li class="basket__item">
+                        <article class="basket-card">
+                            <img class="basket-card__images" src="images/basket-card-1.jpg" alt="Букет ромашек">
+                            <div class="basket-card__content">
+                                <div class="basket-card__top">
+                                    <span class="basket-card__title">№225 “Ромашки для Наташки”</span>
+                                    <svg class="basket-card__icon" aria-label="Картинка удаление товара из корзины">
+                                        <use xlink:href="images/sprite.svg#urn"></use>
+                                    </svg>
+                                </div>
+                                <div class="basket-card__bottom">
+                                    <label class="visually-hidden" for="basket-number">Текстовое поле с возможностью добавления количества товара</label>
+                                    <input class="details__input" id="basket-number" type="number" name="number" value="1" min="1" max="7">
+                                    <div class="basket-card__price">
+                                        <div class="basket-card__old">
+                                            <span class="basket-card__price-numberOld">5400</span> 
+                                            <span>грн</span> 
+                                        </div>
+                                        <div class="basket-card__price-actual">
+                                            <span class="basket-card__price-number">3700</span> 
+                                            <span>грн</span> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
 
+                <div class="basket-scoring">
+                    <h3 class="basket-scoring__title">Сумма заказов</h3>
 
-                    </div>
                 </div>
             </div>
         </section>
-        
     </main>
     <section class="classification">
     <div class="container">

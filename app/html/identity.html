@@ -19,16 +19,13 @@
                     <div class="identity-filter">
                         <ul class="identity-filter__list">
                             <li class="identity-filter__item">
-                                <button class="identity-filter__btn" type="submit">Личные данные</button>
+                                <button class="identity-filter__btn" type="submit" data-filter=".category-a">Личные данные</button>
                             </li>
                             <li class="identity-filter__item">
-                                <button class="identity-filter__btn" type="submit">Адресная книга</button>
+                                <button class="identity-filter__btn" type="submit" data-filter=".category-b">Адресная книга</button>
                             </li>
                             <li class="identity-filter__item">
-                                <button class="identity-filter__btn" type="submit">Отзывы</button>
-                            </li>
-                            <li class="identity-filter__item">
-                                <button class="identity-filter__btn" type="submit">Просмотренные</button>
+                                <button class="identity-filter__btn" type="submit" data-filter=".category-c">Отзывы</button>
                             </li>
                         </ul>
                         <a class="identity-filter__link" href="#">Выйти</a>
@@ -36,10 +33,10 @@
     
                     <div class="identity__inner">
 
-                        <!-- <div class="identity__items">
+                        <div class="identity__items mix category-a">
                             <ul class="breadcrumbs identity__breadcrumbs">
                                 <li class="breadcrumbs__item">
-                                    <a class="breadcrumbs__link" href="#">Главная</a>
+                                    <a class="breadcrumbs__link" href="index.html">Главная</a>
                                 </li>  
                                 <li class="breadcrumbs__item">
                                     <span class="breadcrumbs__link breadcrumbs__link--active">Личные данные</span>
@@ -67,12 +64,12 @@
                                 </ul>
                                 <button class="identity__btn btn" type="submit">Сохранить</button>
                             </form>
-                        </div> -->
+                        </div>
 
-                        <div class="identity__items">
+                        <div class="identity__items mix category-b">
                             <ul class="breadcrumbs identity__breadcrumbs">
                                 <li class="breadcrumbs__item">
-                                    <a class="breadcrumbs__link" href="#">Главная</a>
+                                    <a class="breadcrumbs__link" href="index.html">Главная</a>
                                 </li>  
                                 <li class="breadcrumbs__item">
                                     <span class="breadcrumbs__link breadcrumbs__link--active">Адресная книга</span>
@@ -93,27 +90,52 @@
                                             Город, улица Название, дом 1
                                         </li>
                                     </ol>
-    
                                     <label class="visually-hidden" for="address">Текстовое поле, для добавления адреса</label>
                                     <input class="identity-address__input" type="text" name="адрес" id="address" placeholder="Добавить адрес">
-                                    <span class="identity-address__title">Контакты</span>
-                                    <!-- <ol class="identity-address__list">
-                                        <li class="identity-address__item">
-                                            Имя, +38 (000) 0000000
-                                        </li>
-                                        <li class="identity-address__item">
-                                            Имя, +38 (000) 0000000
-                                        </li>
-                                        <li class="identity-address__item">
-                                            Имя, +38 (000) 0000000
-                                        </li>
-                                    </ol>
-                                    <label class="visually-hidden" for="contact">Текстовое поле, для добавления контакта</label>
-                                    <input class="identity-address__input" type="text" name="контакт" id="contact" placeholder="Добавить новый контакт"> -->
                                     <button class="identity-address__btn btn" type="submit">Сохранить</button>
                                 </form>
                             </address>
                         </div>
+
+                        <div class="identity__items mix category-c">
+                            <ul class="breadcrumbs identity__breadcrumbs">
+                                <li class="breadcrumbs__item">
+                                    <a class="breadcrumbs__link" href="index.html">Главная</a>
+                                </li>  
+                                <li class="breadcrumbs__item">
+                                    <span class="breadcrumbs__link breadcrumbs__link--active">Отзывы</span>
+                                </li>  
+                            </ul>
+                            <span class="identity__title">Отзывы</span>
+                            <div class="identity-review">
+                                <ul class="identity-review__list">
+                                    <li class="identity-review__item">
+                                        <span class="identity-review__subtitle">
+                                            Отзыв о товаре №225 “Ромашки для Наташки”
+                                        </span>
+                                        <div class="identity-review__text">
+                                            <p>
+                                                Веб-дизайн — непростая сфера, провоцирующая постоянные споры. Кто-то скажет, что для привлечения внимания вашему лендингу просто необходим современный дизайн, включающий последние тенденции. Другие считают, что работающая посадочная страница, на которой посетители получают то, зачем пришли, гораздо важнее.
+                                            </p>
+                                        </div>
+                                        <time class="identity-review__time" datetime="2021-12-12 12:00">12:00 12.12.2021</time>
+                                    </li>
+                                    <li class="identity-review__item">
+                                        <span class="identity-review__subtitle">
+                                            Отзыв о товаре №225 “Ромашки для Наташки”
+                                        </span>
+                                        <div class="identity-review__text">
+                                            <p>
+                                                Веб-дизайн — непростая сфера, провоцирующая постоянные споры. Кто-то скажет, что для привлечения внимания вашему лендингу просто необходим современный дизайн, включающий последние тенденции. Другие считают, что работающая посадочная страница, на которой посетители получают то, зачем пришли, гораздо важнее.
+                                            </p>
+                                        </div>
+                                        <time class="identity-review__time" datetime="2021-12-12 12:00">12:00 12.12.2021</time>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+
 
                     </div>
                 </div>

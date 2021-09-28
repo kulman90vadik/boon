@@ -1,23 +1,13 @@
 $(function(){
     
-    let addressInput = document.querySelector('.identity-address__input');
-    let addressItem = document.createElement('li');
-    addressItem.classList.add('identity-address__item');
-    addressInput.addEventListener('input', function() {
-        addressItem.innerHTML = addressInput.value;
-        document.querySelector('.identity-address__list').append(addressItem);
-        addressInput.value = ' ';
-    });
-    // addressInput.addEventListener('blur', function() {
-    //     addressInput.value = ' ';
-    // });
-    
     $('.header__btn').on('click', function(){
         $('.menu').toggleClass('menu--active');
         $('.header__btn-item').toggleClass('header__btn-item--active');
     });
 
     $('.menu__head').on('click', function(){
+        $('.menu__holder').slideUp();
+        $('.menu__plus').removeClass('menu__minus');
         $(this).next('.menu__holder').slideToggle();
         $(this).children('.menu__plus').toggleClass('menu__minus')
     });
@@ -60,46 +50,156 @@ $(function(){
 
     $('.details__input').styler();
 
-    // добавляем в корзину товар
-    let detailsBtn = document.querySelector('.details__btn');
-    let headerNumber = Number(document.querySelector('.header__number').innerHTML);
-    detailsBtn.addEventListener('click', function(){
-        document.querySelector('.header__number').innerHTML = ++headerNumber;
-    });
-    
-    // добавление количества букетов для заказа
-    let detailsPlus = document.querySelector('.details .jq-number__spin.plus');
-    let detailsMinus = document.querySelector('.details .jq-number__spin.minus');
-    let detailsPriceNumber = Number(document.querySelector('.details__price-number').innerHTML);
-    let detailsPriceNumberOld = Number(document.querySelector('.details__price-numberOld').innerHTML);
+///// start /////
+    // let addressInput = document.querySelector('.identity-address__input');
+    // let addressItem = document.createElement('li');
+    // addressItem.classList.add('identity-address__item');
 
-    detailsPlus.addEventListener('click', function(){
-        let detailsInput = +document.getElementById('number').value;
+    // addressInput.addEventListener('input', function() {
+    //     addressItem.innerHTML = addressInput.value;
+    //     document.querySelector('.identity-address__list').append(addressItem);
+    // });
+    // addressInput.addEventListener('blur', function() {
+    //     addressInput.value = ' ';
+    // });  
+
+    let newElement = $('<li class="identity-address__item"></li>');
+    $('.identity-address__input').on('input', function(){
+        newElement.text($('.identity-address__input').val());
+        $('.identity-address__list').append(newElement);
+    });
+    $('.identity-address__input').on('blur', function(){
+        $('.identity-address__input').val('');
+    });
+///// end /////
+
+///// start /////
+    // // добавляем в корзину товар
+    // let detailsBtn = document.querySelector('.details__btn');
+    // let headerNumber = Number(document.querySelector('.header__number').innerHTML);
+    // detailsBtn.addEventListener('click', function(){
+    //     document.querySelector('.header__number').innerHTML = ++headerNumber;
+    // });
+
+    let headerNumber = Number($('.header__number').text());
+    $('.details__btn').on('click', function(){
+        $('.header__number').text(++headerNumber);
+    });
+///// end /////
+
+///// start /////
+    // // добавление количества букетов для заказа
+    // let detailsPlus = document.querySelector('.details .jq-number__spin.plus');
+    // let detailsMinus = document.querySelector('.details .jq-number__spin.minus');
+    // let detailsPriceNumber = Number(document.querySelector('.details__price-number').innerHTML);
+    // let detailsPriceNumberOld = Number(document.querySelector('.details__price-numberOld').innerHTML);
+
+    // detailsPlus.addEventListener('click', function(){
+    //     let detailsInput = +document.getElementById('number').value;
+    //     let sum = detailsPriceNumber * detailsInput;
+    //     let sumOld = detailsPriceNumberOld * detailsInput;
+    //     document.querySelector('.details__price-number').innerHTML = sum;
+    //     document.querySelector('.details__price-numberOld').innerHTML = sumOld;
+    // });
+
+    // detailsMinus.addEventListener('click', function(){
+    //     let detailsPriceNumberMinus = Number(document.querySelector('.details__price-number').innerHTML);
+    //     let detailsPriceNumberMinusOld = Number(document.querySelector('.details__price-numberOld').innerHTML);
+    //     if (detailsPriceNumberMinus > detailsPriceNumber && detailsPriceNumberMinusOld > detailsPriceNumberOld) {
+    //         let sum = detailsPriceNumberMinus - detailsPriceNumber;
+    //         let sumOld = detailsPriceNumberMinusOld - detailsPriceNumberOld;
+    //         document.querySelector('.details__price-number').innerHTML = sum;
+    //         document.querySelector('.details__price-numberOld').innerHTML = sumOld;
+    //     }
+    // });
+
+// добавление товара на  странице details //
+    let detailsPriceNumber = Number($('.details__price-number').text());
+    let detailsPriceNumberOld = Number($('.details__price-numberOld').text());
+
+    $('.details .jq-number__spin.plus').on('click', function(){
+        let detailsInput = Number($('#number').val());
         let sum = detailsPriceNumber * detailsInput;
         let sumOld = detailsPriceNumberOld * detailsInput;
-        document.querySelector('.details__price-number').innerHTML = sum;
-        document.querySelector('.details__price-numberOld').innerHTML = sumOld;
+        $('.details__price-number').text(sum);
+        $('.details__price-numberOld').text(sumOld);
     });
-    detailsMinus.addEventListener('click', function(){
-        let detailsPriceNumberMinus = Number(document.querySelector('.details__price-number').innerHTML);
-        let detailsPriceNumberMinusOld = Number(document.querySelector('.details__price-numberOld').innerHTML);
+    
+    $('.details .jq-number__spin.minus').on('click', function(){
+        let detailsPriceNumberMinus = Number($('.details__price-number').text());
+        let detailsPriceNumberMinusOld = Number($('.details__price-numberOld').text());
         if (detailsPriceNumberMinus > detailsPriceNumber && detailsPriceNumberMinusOld > detailsPriceNumberOld) {
             let sum = detailsPriceNumberMinus - detailsPriceNumber;
             let sumOld = detailsPriceNumberMinusOld - detailsPriceNumberOld;
-            document.querySelector('.details__price-number').innerHTML = sum;
-            document.querySelector('.details__price-numberOld').innerHTML = sumOld;
+            $('.details__price-number').text(sum);
+            $('.details__price-numberOld').text(sumOld);
         }
     });
+// добавление товара на  странице basket //
+let basketPriceNumber = Number($('.basket-card__price-number').text());
+let basketPriceNumberOld = Number($('.basket-card__price-numberOld').text());
 
-    let loginFormIcon = document.querySelector('.login-form__icon');
-    let loginFormPassword = document.querySelector('.login-form__input--password');
-    loginFormIcon.addEventListener('click', function(){
-        loginFormIcon.classList.toggle('login-form__icon--active');
-        if(loginFormPassword.getAttribute('type') === 'password') {
-            loginFormPassword.setAttribute('type', 'text');
+$('.basket-card .jq-number__spin.plus').on('click', function(){
+    let basketInput = Number($('#basket-number').val());
+    let sum = basketPriceNumber * basketInput;
+    let sumOld = basketPriceNumberOld * basketInput;
+    $('.basket-card__price-number').text(sum);
+    $('.basket-card__price-numberOld').text(sumOld);
+});
+
+$('.basket-card .jq-number__spin.minus').on('click', function(){
+    let basketPriceNumberMinus = Number($('.basket-card__price-number').text());
+    let basketPriceNumberMinusOld = Number($('.basket-card__price-numberOld').text());
+    if (basketPriceNumberMinus > basketPriceNumber && basketPriceNumberMinusOld > basketPriceNumberOld) {
+        let sum = basketPriceNumberMinus - basketPriceNumber;
+        let sumOld = basketPriceNumberMinusOld - basketPriceNumberOld;
+        $('.basket-card__price-number').text(sum);
+        $('.basket-card__price-numberOld').text(sumOld);
+    }
+});
+///// end /////
+
+///// start /////
+    // let loginFormIcon = document.querySelector('.login-form__icon');
+    // let loginFormPassword = document.querySelector('.login-form__input--password');
+    // loginFormIcon.addEventListener('click', function(){
+    //     loginFormIcon.classList.toggle('login-form__icon--active');
+    //     if(loginFormPassword.getAttribute('type') === 'password') {
+    //         loginFormPassword.setAttribute('type', 'text');
+    //     } else {
+    //         loginFormPassword.setAttribute('type', 'password');
+    //     }
+    // }); 
+    $('.login-form__icon').on('click', function(){
+        $('.login-form__icon').toggleClass('login-form__icon--active');
+        if($('.login-form__input--password').attr('type') === 'password') {
+            $('.login-form__input--password').attr('type', 'text');
         } else {
-            loginFormPassword.setAttribute('type', 'password');
+            $('.login-form__input--password').attr('type', 'password');
         }
-    }); 
+    });
+///// end /////
+
+///// start /////
+    $('.basket-card__icon').on('click', function(){
+        $(this).parents('.basket-card').fadeOut(1000);
+    });
+///// end /////
+
+
+///// start /////
+        // if ($('body').hasClass('identity__inner')) {
+        //     var Mixer = mixitup('.identity__inner');
+        //     Mixer.filter('.category-a');
+        // } 
+        if ($('.identity__inner')) {
+            var Mixer = mixitup('.identity__inner');
+            Mixer.filter('.category-a');
+        }
+        // var Mixer = mixitup('.identity__inner');
+        // Mixer.filter('.category-a');
+///// end /////
+
+
     
 });
