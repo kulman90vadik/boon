@@ -201,13 +201,100 @@
                         </article>
                     </li>
                 </ul>
-
                 <div class="basket-scoring">
                     <h3 class="basket-scoring__title">Сумма заказов</h3>
+                    <form class="basket-scoring__form" action="#">
 
+                        <div class="basket-scoring__item">
+                            <p class="basket-scoring__descr">Общая сумма заказов:</p>
+                            <div class="basket-scoring__text">
+                                <div class="basket-scoring__number">3700</div>
+                                <span>грн</span>
+                            </div>
+                        </div>
+
+                        <div class="basket-scoring__item">
+                            <p class="basket-scoring__descr">Способ оплаты:</p>
+                            <div class="basket-scoring__holder">
+                                <label class="basket-scoring__label">
+                                    <input class="basket-scoring__input" type="radio" name="Оплата" checked>
+                                    <span class="basket-scoring__radio" aria-label="Выбор в виде переключателя"></span>
+                                    Оплата при доставке
+                                </label>
+                                <label class="basket-scoring__label">
+                                    <input class="basket-scoring__input" type="radio" name="Оплата">
+                                    <span class="basket-scoring__radio" aria-label="Выбор в виде переключателя"></span>
+                                    Оплата картой
+                                </label>
+                                <label class="basket-scoring__label">
+                                    <input class="basket-scoring__input" type="radio" name="Оплата">
+                                    <span class="basket-scoring__radio" aria-label="Выбор в виде переключателя"></span>
+                                    Оплата на карту ПриватБанк
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="basket-scoring__item basket-scoring__item--delivery">
+                            <p class="basket-scoring__descr">Доставка:</p>
+                            <div class="basket-scoring__inner">
+                                <div class="basket-scoring__items">
+                                    <div class="basket-scoring__head">Самовызов</div>
+                                    <label class="basket-scoring__label">
+                                        <input class="basket-scoring__input" type="radio" name="Цена" checked>
+                                        <span class="basket-scoring__radio" aria-label="Выбор в виде переключателя"></span>
+                                        Бесплатно
+                                    </label>
+                                </div>
+                                <div class="basket-scoring__items">
+                                    <div class="basket-scoring__head">Курьером</div>
+                                    <label class="basket-scoring__label ">
+                                        <input class="basket-scoring__input basket-scoring__input--delivery" type="radio" name="Цена">
+                                        <span class="basket-scoring__radio" aria-label="Выбор в виде переключателя"></span>
+                                        <div class="basket-scoring__text">
+                                            <div class="basket-scoring__number-price">1000</div>
+                                            <span>грн</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="basket-scoring__item">
+                            <p class="basket-scoring__descr">Скидка:</p>
+                            <div class="basket-scoring__sale">-10%</div>
+                        </div>
+
+                        <div class="basket-scoring__item">
+                            <p class="basket-scoring__descr">Итого к оплате:</p>
+                            <div class="basket-scoring__resultant">
+                                <div class="basket-scoring__sum">3330</div>
+                                <span>грн</span>
+                            <div>
+                        </div>
+
+                    </form>
                 </div>
             </div>
         </section>
+
+
+        <section class="basket-ordering">
+            <div class="container">
+                <h2 class="basket-ordering__title">Оформление заказа</h2>
+    
+                <form class="form basket-ordering__form" action="#">
+                    <label class="visually-hidden" for="basket-ordering-name">Введите Ваше имя</label>
+                    <input class="form__input" type="text" name="Имя" required id="basket-ordering-name" placeholder="Имя">
+                    <label class="visually-hidden" for="basket-ordering-tel">Введите Ваш номер телефона</label>
+                    <input class="form__input" type="tel" required name="Телефон" id="basket-ordering-tel" placeholder="Телефон">
+                    <label class="visually-hidden" for="basket-ordering-adress">Введите Ваш номер телефона</label>
+                    <input class="form__input" required type="text" name="Телефон" id="basket-ordering-adress" placeholder="Адрес доставки">
+                    <button class="form__btn" type="submit">Подтверждение заказа</button>
+                </form>
+            </div>
+        </section>
+
+
     </main>
     <section class="classification">
     <div class="container">

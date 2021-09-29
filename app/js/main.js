@@ -144,6 +144,9 @@ $('.basket-card .jq-number__spin.plus').on('click', function(){
     let sum = basketPriceNumber * basketInput;
     let sumOld = basketPriceNumberOld * basketInput;
     $('.basket-card__price-number').text(sum);
+    $('.basket-scoring__number').text(sum);
+    $('.basket-scoring__sum').text(sum - (sum / 10));
+
     $('.basket-card__price-numberOld').text(sumOld);
 });
 
@@ -154,6 +157,9 @@ $('.basket-card .jq-number__spin.minus').on('click', function(){
         let sum = basketPriceNumberMinus - basketPriceNumber;
         let sumOld = basketPriceNumberMinusOld - basketPriceNumberOld;
         $('.basket-card__price-number').text(sum);
+        $('.basket-scoring__number').text(sum);
+        $('.basket-scoring__sum').text(sum - (sum / 10));
+
         $('.basket-card__price-numberOld').text(sumOld);
     }
 });
@@ -184,6 +190,19 @@ $('.basket-card .jq-number__spin.minus').on('click', function(){
     $('.basket-card__icon').on('click', function(){
         $(this).parents('.basket-card').fadeOut(1000);
     });
+///// end /////
+
+///// start /////
+
+// нужно подумать 
+
+    // $('.basket-scoring__input--delivery').on('change', function(){
+    //     if(this.checked) {
+    //         // $('.basket-scoring__sum').text(sum - (sum / 10));
+    //         let num = Number($('.basket-scoring__sum').text());
+    //         $('.basket-scoring__sum').text(num + 1000);
+    //     }
+    // });
 ///// end /////
 
 
