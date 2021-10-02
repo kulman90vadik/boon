@@ -4,17 +4,32 @@
     padding-top: 20px;
     &__wrapper {
         display: flex;
+        @include max($xl) {
+            display: block;
+        }
     }
     &__list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 30px 11px;
+        @include max($lg) {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 580px;
+            width: 100%;
+            margin: 0 auto;
+            grid-gap: 12px 12px;
+        }
+        @include max($md) {
+            grid-template-columns: repeat(1, 1fr);
+            max-width: 285px;
+        }
     }
     &::after,
     &::before {
         position: absolute;
         content: '';
         @include bg;
+        z-index: -5;
     }
     &::after {
         background-image: url(../images/discount-decor-1.png);
@@ -29,5 +44,11 @@
         height: 99px;
         right: 0;
         top: 222px;
+    }
+    @include max($lg) {
+        margin-bottom: 40px;
+    }
+    @include max($md) {
+        margin-bottom: 20px;
     }
 }

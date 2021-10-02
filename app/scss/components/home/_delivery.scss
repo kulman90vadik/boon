@@ -5,15 +5,41 @@
     @include bg;
     &__title {
         margin-bottom: 115px;
+        @include max($lg) {
+            margin-bottom: 30px;
+        }
     }
     &__text {
         max-width: 760px;
         width: 100%;
         margin: 0 auto;
+        font-size: 36px;              
         p {
-            font-size: 36px;              
             @include lineClamp;
             -webkit-line-clamp: 4;
+            @include max($s) {
+                @include lineClamp;
+                -webkit-line-clamp: 6;
+            }
         }
+        @include max($lg) {
+            max-width: 535px;
+            font-size: 25px;
+        }
+        @include max($md) {
+            font-size: 16px;
+        }    
+    }
+    @include max($xl) {
+        min-height: 500px;
+        margin-bottom: 40px;
+        padding-top: 20px;
+    }
+    @include max($lg) {
+        min-height: 400px;
+        margin-bottom: 30px;
+    }
+    @include max($md) {
+        min-height: 300px;
     }
 }

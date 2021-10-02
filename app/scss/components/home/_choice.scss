@@ -15,6 +15,15 @@
             @include bg;
             background-image: url(../images/choice-title-decor.png);
             left: 0;
+            @include max($md) {
+                display: none;
+            }
+        }
+        @include max($lg) {
+            margin-bottom: 13px;
+        }
+        @include max($md) {
+            padding-left: 0;
         }
     }
     &__list {
@@ -22,6 +31,26 @@
         grid-template-columns: repeat(4, 1fr);
         margin-bottom: 25px;
         grid-gap: 20px 10px;
+        @include max($xl) {
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 870px;
+            margin: 0 auto 25px;
+        }
+        @include max($lg) {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 575px;
+            margin: 0 auto 20px;
+        }
+        @include max($lg) {
+            grid-template-columns: repeat(1, 1fr);
+            max-width: 284px;
+        }
+    }
+    &__item {
+        @include max($xl) {
+            max-width: 284px;
+            width: 100%;
+        }
     }
     &__link {
         display: block;
@@ -47,8 +76,15 @@
         position: absolute;
         content: '';
         left: 400px;
+        z-index: -1;
         @include bg;
         background-image: url(../images/choice-decor.png);
         bottom: -35px;
+        @include max($sm) {
+            left: 75%;
+        }
+    }
+    @include max($lg) {
+        padding-bottom: 31px;
     }
 }

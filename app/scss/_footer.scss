@@ -3,14 +3,19 @@
     &__title {
         text-align: center;
         font-weight: 600;
-        font-size: 36px;
         margin-bottom: 24px;
+        @include max($md) {
+            margin-bottom: 10px;
+        }
     }
     &__list {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-bottom: 32px;
+        @include max($md) {
+            margin-bottom: 14px;
+        }
     }
     &__item {
         &:not(:last-child) {
@@ -47,6 +52,9 @@
         &:active {
             color: #616161;
         }
+        @include max($sm) {
+            font-size: 20px;
+        }
     }
     &__link--tel {
         &:after {
@@ -64,5 +72,11 @@
         font-size: 24px;
         @include lineClamp;
         -webkit-line-clamp: 1;
+        @include max($sm) {
+            font-size: 18px;
+        }
+    }
+    @include max($lg) {
+        padding: 25px 0;
     }
 }

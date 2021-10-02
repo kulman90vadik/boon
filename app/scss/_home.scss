@@ -25,6 +25,9 @@
         font-weight: 400;
         @include lineClamp;
         -webkit-line-clamp: 1;
+        @include max($sm) {
+            font-size: 20px;
+        }
     }
     &__title {
         font-size: 64px;
@@ -33,5 +36,27 @@
         margin-bottom: 25px;
         @include lineClamp;
         -webkit-line-clamp: 2;
+        @include max($lg) {
+            font-size: 45px;
+            line-height: 1;
+            letter-spacing: 0;
+        }
+        @include max($md) {
+            font-size: 40px;
+            margin-bottom: 14px;
+        }
+        @include max($sm) {
+            font-size: 34px;
+        }
+        @include max($s) {
+            font-size: 27px;
+        }
+    }
+    &__link {
+        @include max($sm) {
+            font-size: 20px;
+            padding: 18px 30px;
+        }
+        
     }
 }

@@ -2,24 +2,89 @@
     margin-bottom: 50px;
     &__title {
         margin-bottom: 40px;
+        @include max($lg) {
+            margin-bottom: 20px;
+        }
+        @include max($sm) {
+            margin-bottom: 0;
+        }
     }
     &__inner {
         display: flex;
         justify-content: space-between;
+        @include max($lg) {
+            flex-wrap: wrap;
+            max-width: 575px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        @include max($sm) {
+            justify-content: center;
+        }
+    }
+    &__column {
+        &:not(:last-child) {
+            margin-right: 10px;
+            @include max($lg) {
+                margin-right: 0;
+            }
+            @include max($sm) {
+                margin-right: 10px;
+            }
+            @include max($s) {
+                margin-right: 0;
+            }
+        }
+        &--lang {
+            @include max($lg) {
+                order: 1;
+            }
+        }
+        @include max($sm) {
+            margin: 10px;
+            margin-bottom: 0;
+        }
+        @include max($s) {
+            margin-right: 0;
+            margin-left: 0;
+        }
     }
     &__item {
         max-width: 280px;
         width: 100%;
         height: 358px;
         margin-bottom: 20px;
+        @include max($md) {
+            max-width: 250px;
+            height: 320px;
+            margin-bottom: 20px;
+        }
+        @include max($sm) {
+            margin-bottom: 10px;
+        }
     }
     &__item--lang {
         max-width: 575px;
         height: 210px;
         width: 100%;
         margin-bottom: 28px;
+        @include max($md) {
+            margin-bottom: 10px;
+        }
+        @include max($sm) {
+            height: 170px;
+        }
     }
     &__item--high {
         height: 260px;
+        @include max($md) {
+            height: 210px;
+        }
+        @include max($sm) {
+            height: 170px;
+        }
+    }
+    @include max($lg) {
+        margin-bottom: 25px;
     }
 }

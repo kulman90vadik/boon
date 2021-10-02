@@ -18,9 +18,16 @@
             font-weight: 400;
             font-size: 36px;
             color: rgba(0, 0, 0, 0.54);
+            @include max($lg) {
+                font-size: 17px;
+            }
         }
         &:focus {
             background-color: #cccbcb;
+        }
+        @include max($lg) {
+            padding: 10px 15px;
+            font-size: 17px;
         }
     }
     &__textarea {
@@ -28,6 +35,9 @@
         height: 378px;
         border-radius: 20px;
         margin-bottom: 50px;
+        @include max($lg) {
+            height: 230px;
+        }
     }
     &__btn {
         display: block;
@@ -51,6 +61,9 @@
         }
         &:active {
             background-color: $pink;
+        }
+        @include max($lg) {
+            padding: 13px 47px;
         }
     }
 }

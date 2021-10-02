@@ -60,6 +60,9 @@
     &__item {
         &:not(:last-child) {
             margin-right: 10px;
+            @include max($s) {
+                margin-right: 4px;
+            }
         }
     }
     &__link {
@@ -90,6 +93,16 @@
         right: 0;
         top: -27px;
         font-size: 15px;
+        @include max($lg) {
+            width: 19px;
+            height: 19px;
+            top: -18px;
+            font-size: 13px;
+        }
+        @include max($s) {
+            top: -10px;
+            right: -6px;
+        }
     }
     &__icon {
         fill: $pink;
@@ -99,14 +112,38 @@
     &__search {
         width: 37px;
         height: 37px;
+        @include max($lg) {
+            width: 27px;
+            height: 27px;
+        }
+        @include max($s) {
+            width: 20px;
+            height: 20px;
+        }
     }
     &__corb {
         width: 45px;
         height: 32px;
+        @include max($lg) {
+            width: 35px;
+            height: 22px;
+        }
+        @include max($s) {
+            width: 28px;
+            height: 15px;
+        }
     }
     &__login {
         width: 34px;
         height: 45px;
+        @include max($lg) {
+            width: 24px;
+            height: 25px;
+        }
+        @include max($s) {
+            width: 17px;
+            height: 18px;
+        }
     }
 }
 
@@ -115,6 +152,14 @@
     &__images {
         width: 205px;
         height: 54px;
+        @include max($lg) {
+            width: 178px;
+            height: 40px;
+        }
+        @include max($s) {
+            width: 114px;
+            height: 34px;
+        }
     }
 }
 
@@ -219,5 +264,13 @@
         &:active {
             background-color: $pink;
         }
+    }
+    @include max($lg) {
+        top: 56px;
+    }
+    @include max($s) {
+        max-width: 100%;
+        left: 0;
+        top: 50px;
     }
 }

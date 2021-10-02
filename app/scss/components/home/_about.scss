@@ -2,6 +2,12 @@
     margin-bottom: 80px;
     &__title {
         margin-bottom: 30px;
+        @include max($s) {
+            @include lineClamp;
+            -webkit-line-clamp: 2;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
     }
     &__item {
         position: relative;
@@ -9,9 +15,15 @@
         margin-bottom: 15px;
         &:nth-child(odd) {
             justify-content: flex-end;
+            @include max($s) {
+                margin-bottom: 50px;
+            }
         }
         &:nth-child(even) {
             margin-bottom: 65px;
+            @include max($s) {
+                margin-bottom: 50px;
+            }
         }
         &:nth-child(1),
         &:nth-child(2),
@@ -31,6 +43,9 @@
                 left: 30%;
                 transform: rotate(-60deg);
                 background-image: url(../images/about-decor-1.png);
+                @include max($md) {
+                    display: none;
+                }
             }
             &::before {
                 width: 83px;
@@ -49,6 +64,9 @@
                 right: 0;
                 bottom: 0;
                 background-image: url(../images/about-decor-3.png);
+                @include max($md) {
+                    display: none;
+                }
             }
         }
         &:nth-child(3) {
@@ -72,6 +90,10 @@
         p {
             @include lineClamp;
             -webkit-line-clamp: 6;
+            @include max($sm) {
+                @include lineClamp;
+                -webkit-line-clamp: 8;
+            }
         }
     }
     &__images {
@@ -83,6 +105,17 @@
         padding: 67px 50px;
         bottom: 100px;
         left: 230px;
+        @include max($lg) {
+            bottom: 60px;
+            left: 70px;
+        }
+        @include max($md) {
+            max-width: 360px;
+        }
+        @include max($sm) {
+            left: 10px;
+            bottom: 30px;
+        }
     }
     &__images--composition-1 {
         max-width: 563px;
@@ -94,6 +127,12 @@
         bottom: -30px;
         left: 50%;
         transform: translateX(-50%);
+        @include max($sm) {
+            right: 10px;
+            left: auto;
+            transform: translateX(0);
+            max-width: 310px;
+        }
     }
     &__images--composition-2 {
         max-width: 697px;
@@ -104,9 +143,71 @@
         padding: 96px 84px;
         bottom: 100px;
         left: 230px;
+        @include max($lg) {
+            bottom: 40px;
+            left: 95px;
+        }
+        @include max($md) {
+            max-width: 310px;
+        }
+        @include max($sm) {
+            left: 10px;
+        }
     }
     &__images--composition-3 {
         max-width: 500px;
         height: 551px;
+    }
+    &__text--composition-3,
+    &__text--composition-2,
+    &__text--composition-1 {
+        @include max($lg) {
+            padding: 30px;
+            font-size: 16px;
+        }
+        @include max($md) {
+            padding: 15px;     
+        }
+        @include max($s) {
+            max-width: 100%;  
+            left: 0;
+            right: auto;
+            bottom: -30px;
+        }
+    }
+    &__images--composition-2 {
+        @include max($lg) {
+            max-width: 458px;
+            height: 261px;
+        }
+        @include max($sm) {
+            max-width: 391px;
+            height: 213px;
+        }
+    }
+
+    &__images--composition-1 {
+        @include max($lg) {
+            max-width: 329px;
+            height: 378px;
+        }
+        @include max($sm) {
+            max-width: 300px;
+            height: 348px;
+        }
+    }
+
+    &__images--composition-3 {
+        @include max($lg) {
+            max-width: 369px;
+            height: 410px;
+        }
+        @include max($md) {
+            max-width: 284px;
+            height: 327px;
+        }
+    }
+    @include max($lg) {
+        margin-bottom: 45px;
     }
 }

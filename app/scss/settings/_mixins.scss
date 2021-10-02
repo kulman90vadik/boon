@@ -10,11 +10,11 @@
     overflow: hidden;
 }
 
-// @mixin max($width) {
-//     @media only screen and (max-width: $width+ "px") {
-//         @content;
-//     }
-// }
+@mixin max($width) {
+    @media only screen and (max-width: $width+ "px") {
+        @content;
+    }
+}
 
 
 @function max($numbers...) {

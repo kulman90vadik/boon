@@ -27,7 +27,32 @@ $(function(){
         slidesToShow: 4,
         slidesToScroll: 4,
         dots: true,
-        arrows: false
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            },
+            {
+                breakpoint: 990,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 720,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: false,
+                    arrows: true
+                }
+            }
+        ]
     });
 
     $('.details__slider-top').slick({
@@ -205,6 +230,9 @@ $('.basket-card .jq-number__spin.minus').on('click', function(){
     // });
 ///// end /////
 
+    $('.sidebar__subtitle').on('click', function() {
+        $(this).next('.sidebar__list').slideToggle();
+    });
 
 ///// start /////
         // if ($('body').hasClass('identity__inner')) {

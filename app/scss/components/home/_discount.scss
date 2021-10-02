@@ -4,10 +4,28 @@
     position: relative;
     &__title {
         margin-bottom: 40px;
+        @include max($lg) {
+            margin-bottom: 15px;
+        }
+        @include max($md) {
+            margin-bottom: 0;
+        }
     }
     &__list {
         display: flex;
         justify-content: space-between;
+        @include max($xl) {
+            max-width: 870px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        @include max($lg) {
+            max-width: 550px;
+        }
+        @include max($md) {
+            max-width: 280px;
+        }
+
     }
     & .slick-dots {
         position: absolute;
@@ -52,7 +70,15 @@
         top: 30px;
         width: 45px;
         height: 107px;
+        z-index: -1;
         background-image: url(../images/discount-decor-1.png);
+        @include max($lg) {
+            width: 25px;
+            height: 87px;
+        }
+        @include max($md) {
+            display: none;
+        }
     }
     &::before {
         width: 65px;
@@ -60,5 +86,35 @@
         right: 0;
         bottom: 100px;
         background-image: url(../images/discount-decor-2.png);
+        @include max($md) {
+            display: none;
+        }
+    }
+    @include max($lg) {
+        padding-top: 20px;
+    }
+    @include max($md) {
+        margin-bottom: 20px;
+    }
+    & .slick-arrow {
+        position: absolute;
+        bottom: 10px;
+        z-index: 5;
+        border: none;
+        padding: 6px;
+        width: 14px;
+        height: 20px;
+        font-size: 0;
+        @include bg;
+        cursor: pointer;
+        background-color: transparent;
+    }
+    & .slick-prev {
+        right: 34px;
+        background-image: url(../images/icons/arrow-left.svg);
+    }
+    & .slick-next {
+        right: 10px;
+        background-image: url(../images/icons/arrow-right.svg);
     }
 }

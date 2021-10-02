@@ -2,6 +2,9 @@
     padding-top: 30px;
     &__list {
         margin-bottom: 70px;
+        @include max($lg) {
+            margin-bottom: 30px;
+        }
     }
     &__item {
         &:not(:last-child) {
@@ -16,6 +19,21 @@
             height: 330px;
             margin-right: 25px;
             object-fit: cover;
+            @include max($lg) {
+                max-width: 220px;
+                height: 220px;
+                margin-right: 10px;
+            }
+            @include max($sm) {
+                margin-right: 0;
+                max-width: 290px;
+                height: 290px;
+                margin-bottom: 15px;
+            }
+            @include max($s) {
+                max-width: 220px;
+                height: 220px;
+            }
         }
         &__content {
             display: flex;
@@ -33,12 +51,28 @@
             font-size: 36px;
             @include lineClamp;
             -webkit-line-clamp: 1;
+            @include max($xl) {
+                font-size: 25px;
+            }
+            @include max($md) {
+                font-size: 20px;
+                @include lineClamp;
+                -webkit-line-clamp: 2;
+                width: 190px;
+            }
+            @include max($s) {
+                font-size: 18px;
+            }
         }
         &__icon {
             fill: #000;
             cursor: pointer;
             width: 40px;
             height: 43px;
+            @include max($sm) {
+                width: 30px;
+                height: 33px;
+            }
         }
         & .details__price {
             order: -1;
@@ -69,6 +103,9 @@
             font-weight: 400;
             text-align: center;
             color: #333;
+            @include max($sm) {
+                height: 43px;
+            }
         }
         & .jq-number__spin {
             position: absolute;
@@ -123,11 +160,22 @@
             margin-bottom: 14px;
             font-size: 18px;
             text-decoration-line: line-through;
-            color: #8E8D6F
+            color: #8E8D6F;
+            @include max($sm) {
+                margin-bottom: 0;
+                font-size: 16px;
+            }
         }
         &__price-actual {
             font-size: 24px;
             color: #7EA048;
+            @include max($sm) {
+                font-size: 19px;
+            }
+        }
+        @include max($sm) {
+            flex-direction: column;
+            align-items: center;
         }
     }
     & .basket-scoring {
@@ -136,6 +184,13 @@
             text-align: center;
             margin-bottom: 35px;
             font-size: 48px;
+            @include max($lg) {
+                margin-bottom: 15px;
+                font-size: 30px;
+            }  
+            @include max($s) {
+                font-size: 22px;
+            }   
         }
         &__item {
             display: flex;
@@ -144,6 +199,13 @@
             &:not(:last-child) {
                 margin-bottom: 15px;
             }
+            @include max($md) {
+                padding: 10px 0;
+                border-bottom: 1px solid #303030;
+            }  
+            @include max($sm) {
+                flex-direction: column;
+            }
         }
         &__item--delivery {
             align-items: flex-start;
@@ -151,9 +213,18 @@
         &__descr {
             font-size: 24px;
             margin-right: 20px;
+            @include max($md) {
+                font-size: 19px;
+            }  
+            @include max($sm) {
+                margin-right: auto;
+            }
         }
         &__text {
             display: flex;
+            @include max($sm) {
+                margin-left: auto;
+            }
         }
         &__label {
             position: relative;
@@ -167,7 +238,9 @@
             &:hover {
                 color: #FD4F79;
             }
-
+            @include max($s) {
+                font-size: 16px;
+            }
         }
         &__radio {
             display: block;
@@ -213,6 +286,9 @@
             display: flex;
             flex-direction: column;
             align-items: flex-end;
+            @include max($sm) {
+                margin-left: auto;
+            }
         }
         &__items {
             display: flex;
@@ -220,6 +296,14 @@
         }
         &__head {
             font-size: 24px;
+            @include max($md) {
+                font-size: 19px;
+            }  
+        }
+        &__sale {
+            @include max($sm) {
+                margin-left: auto;
+            }
         }
         &__number,
         &__sum,
@@ -232,7 +316,13 @@
             font-weight: 700;
             font-size: 24px;
             color: #7EA048;
+            @include max($sm) {
+                margin-left: auto;
+            }
         }
+    }
+    @include max($md) {
+        margin-bottom: 15px;
     }
 }
 
@@ -245,6 +335,13 @@
         font-weight: 600;
         @include lineClamp;
         -webkit-line-clamp: 1;
+        @include max($lg) {
+            margin-bottom: 15px;
+            font-size: 30px;
+        }   
+        @include max($s) {
+            font-size: 22px;
+        }   
     }
     &__form {
         margin: 0 auto;
@@ -254,6 +351,7 @@
             position: absolute;
             content: '';
             @include bg;
+            z-index: -5;
         }
         &::after {
             background-image: url(../images/about-decor-2.png);
@@ -268,9 +366,26 @@
             height: 107px;
             right: -200px;
             bottom: 100px;
+            @include max($xl) {
+                right: -100px;
+            }
+            @include max($lg) {
+                right: 0;
+                bottom: -40px;
+            }
+            @include max($sm) {
+                display: none;
+            }
         }
     }
     & .form__btn {
         margin-right: auto;
+        @include max($md) {
+            font-size: 18px;
+        }
+        @include max($s) {
+            font-size: 17px;
+            padding: 10px 25px;
+        }
     }
 }
