@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basket</title>
+    <link rel="shortcut icon" href="../images/logo-title.png" type="image/png">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    @include('./components/header.html')
+    <main class="main">
+        <section class="home" style="background-image: url(../images/home-bg.jpg);">
+            <div class="container">
+                <div class="home__inner">
+                    <h1 class="home__title wow animate__backInUp" data-wow-delay="1.5s" data-wow-duration="1.5s">Корзина</h1>
+                </div>
+            </div>
+        </section>      
+
+        <section class="basket">
+            <div class="container">
+                <h2 class="visually-hidden">Детали заказа</h2>
+                <ul class="basket__list">
+                    <!-- <li class="basket__item">
+                        <article class="basket-card">
+                            <img class="basket-card__images" src="images/basket-card-1.jpg" alt="Букет ромашек">
+                            <div class="basket-card__content">
+                                <div class="basket-card__top">
+                                    <span class="basket-card__title">№225 “Ромашки для Наташки”</span>
+                                    <svg class="basket-card__icon" aria-label="Картинка удаление товара из корзины">
+                                        <use xlink:href="images/sprite.svg#urn"></use>
+                                    </svg>
+                                </div>
+                                <div class="basket-card__bottom">
+                                    <label class="visually-hidden" for="basket-number">Текстовое поле с возможностью добавления количества товара</label>
+                                    <input class="details__input" id="basket-number" type="number" name="number" value="1" min="1" max="7">
+                                    <div class="basket-card__price">
+                                        <div class="basket-card__old">
+                                            <span class="basket-card__price-numberOld">5400</span> 
+                                            <span>грн</span> 
+                                        </div>
+                                        <div class="basket-card__price-actual">
+                                            <span class="basket-card__price-number">3700</span> 
+                                            <span>грн</span> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </li> -->
+                    <li class="basket__item">
+                        <article class="basket-card">
+                            <img class="basket-card__images" src="images/basket-card-1.jpg" alt="Букет ромашек">
+                            <div class="basket-card__content">
+                                <div class="basket-card__top">
+                                    <span class="basket-card__title">№225 “Ромашки для Наташки”</span>
+                                    <svg class="basket-card__icon" aria-label="Картинка удаление товара из корзины">
+                                        <use xlink:href="images/sprite.svg#urn"></use>
+                                    </svg>
+                                </div>
+                                <div class="basket-card__bottom">
+                                    <label class="visually-hidden" for="basket-number">Текстовое поле с возможностью добавления количества товара</label>
+                                    <input class="details__input" id="basket-number" type="number" name="number" value="1" min="1" max="7">
+                                    <div class="basket-card__price">
+                                        <div class="basket-card__old">
+                                            <span class="basket-card__price-numberOld">5400</span> 
+                                            <span>грн</span> 
+                                        </div>
+                                        <div class="basket-card__price-actual">
+                                            <span class="basket-card__price-number">3700</span> 
+                                            <span>грн</span> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+                <div class="basket-scoring">
+                    <h3 class="basket-scoring__title wow animate__backInUp" data-wow-duration="1.5s" data-wow-offset="10">Сумма заказов</h3>
+                    <form class="basket-scoring__form" action="#">
+
+                        <div class="basket-scoring__item">
+                            <p class="basket-scoring__descr">Общая сумма заказов:</p>
+                            <div class="basket-scoring__text">
+                                <div class="basket-scoring__number">3700</div>
+                                <span>грн</span>
+                            </div>
+                        </div>
+
+                        <div class="basket-scoring__item">
+                            <p class="basket-scoring__descr">Способ оплаты:</p>
+                            <div class="basket-scoring__holder">
+                                <label class="basket-scoring__label">
+                                    <input class="basket-scoring__input" type="radio" name="Оплата" checked>
+                                    <span class="basket-scoring__radio" aria-label="Выбор в виде переключателя"></span>
+                                    Оплата при доставке
+                                </label>
+                                <label class="basket-scoring__label">
+                                    <input class="basket-scoring__input" type="radio" name="Оплата">
+                                    <span class="basket-scoring__radio" aria-label="Выбор в виде переключателя"></span>
+                                    Оплата картой
+                                </label>
+                                <label class="basket-scoring__label">
+                                    <input class="basket-scoring__input" type="radio" name="Оплата">
+                                    <span class="basket-scoring__radio" aria-label="Выбор в виде переключателя"></span>
+                                    Оплата на карту ПриватБанк
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="basket-scoring__item basket-scoring__item--delivery">
+                            <p class="basket-scoring__descr">Доставка:</p>
+                            <div class="basket-scoring__inner">
+                                <div class="basket-scoring__items">
+                                    <div class="basket-scoring__head">Самовызов</div>
+                                    <label class="basket-scoring__label">
+                                        <input class="basket-scoring__input" type="radio" name="Цена" checked>
+                                        <span class="basket-scoring__radio" aria-label="Выбор в виде переключателя"></span>
+                                        Бесплатно
+                                    </label>
+                                </div>
+                                <div class="basket-scoring__items">
+                                    <div class="basket-scoring__head">Курьером</div>
+                                    <label class="basket-scoring__label ">
+                                        <input class="basket-scoring__input basket-scoring__input--delivery" type="radio" name="Цена">
+                                        <span class="basket-scoring__radio" aria-label="Выбор в виде переключателя"></span>
+                                        <div class="basket-scoring__text">
+                                            <div class="basket-scoring__number-price">1000</div>
+                                            <span>грн</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="basket-scoring__item">
+                            <p class="basket-scoring__descr">Скидка:</p>
+                            <div class="basket-scoring__sale">-10%</div>
+                        </div>
+
+                        <div class="basket-scoring__item">
+                            <p class="basket-scoring__descr">Итого к оплате:</p>
+                            <div class="basket-scoring__resultant">
+                                <div class="basket-scoring__sum">3330</div>
+                                <span>грн</span>
+                            <div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="basket-ordering">
+            <div class="container">
+                <h2 class="basket-ordering__title wow animate__backInUp" data-wow-duration="1.5s" data-wow-offset="10">Оформление заказа</h2>
+                <form class="form basket-ordering__form" action="#">
+                    <label class="visually-hidden" for="basket-ordering-name">Введите Ваше имя</label>
+                    <input class="form__input" type="text" name="Имя" required id="basket-ordering-name" placeholder="Имя">
+                    <label class="visually-hidden" for="basket-ordering-tel">Введите Ваш номер телефона</label>
+                    <input class="form__input" type="tel" required name="Телефон" id="basket-ordering-tel" placeholder="Телефон">
+                    <label class="visually-hidden" for="basket-ordering-adress">Введите Ваш номер телефона</label>
+                    <input class="form__input" required type="text" name="Телефон" id="basket-ordering-adress" placeholder="Адрес доставки">
+                    <button class="form__btn" type="submit">Подтверждение заказа</button>
+                </form>
+            </div>
+        </section>
+
+
+    </main>
+    @include('./components/catalog/classification.html')
+    @include('./components/footer.html')
+    
+    <script src="js/main.min.js"></script>
+</body>
+</html>
