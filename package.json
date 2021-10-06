@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "http://kulman90vadik.github.io/boon",
+  "homepage": "http://kulman90vadik.github.io/boon/",
   "scripts": {
     "deploy": "gh-pages -d dist"
   },
