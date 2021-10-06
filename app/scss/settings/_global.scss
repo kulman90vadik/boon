@@ -99,8 +99,17 @@ body {
     }
 }
 
+.menu--active::-webkit-scrollbar {
+    width: 15px;
+}
 
-// @include max($s) {
-//     top: -10px;
-//     right: -6px;
-// }
+.menu--active::-webkit-scrollbar-track {
+    background-color: #32436E;
+}
+
+.menu--active::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background-color: #3A813F;
+    cursor: pointer;
+}
+

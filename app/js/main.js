@@ -6,8 +6,8 @@ $(function(){
     });
 
     $('.menu__head').on('click', function(){
-        $('.menu__holder').slideUp();
-        $('.menu__plus').removeClass('menu__minus');
+        // $('.menu__holder').slideUp();
+        // $('.menu__plus').removeClass('menu__minus');
         $(this).next('.menu__holder').slideToggle();
         $(this).children('.menu__plus').toggleClass('menu__minus')
     });
@@ -23,6 +23,11 @@ $(function(){
         }
     });
 
+
+    new WOW().init();
+
+
+    
     $('.discount__list').slick({
         slidesToShow: 4,
         slidesToScroll: 4,
@@ -247,6 +252,6 @@ $('.basket-card .jq-number__spin.minus').on('click', function(){
         // Mixer.filter('.category-a');
 ///// end /////
 
-
+        
     
 });

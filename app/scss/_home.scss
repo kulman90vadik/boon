@@ -51,6 +51,12 @@
         @include max($s) {
             font-size: 27px;
         }
+        &--catalog-card {
+            @include max($sm) {
+                @include lineClamp;
+                -webkit-line-clamp: 3;
+            }
+        }
     }
     &__link {
         @include max($sm) {

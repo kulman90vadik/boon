@@ -173,10 +173,8 @@
     transition: transform 0.3s ease-in;
     &--active {
         transform: translateX(0);
-        // position: fixed;
-        // overflow-y: scroll;
-        // top: 70px;
-        // bottom: 0;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
     }
     &__item {
         position: relative;

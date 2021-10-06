@@ -4,28 +4,67 @@
         display: flex;
         margin-bottom: 30px;
         padding-top: 35px;
+        @include max($lg) {
+            flex-direction: column;
+        }
     }
     &__sliders {
         width: 459px;
         margin-right: 20px;
+        @include max($lg) {
+            margin: 0 auto 20px;
+        }
+        @include max($sm) {
+            width: 350px;
+        }
+        @include max($s) {
+            width: 288px;
+        }
     }
     &__slider-top {
         margin-bottom: 15px;
+        @include max($s) {
+            margin-bottom: 5px;
+        }
     }
 
     &__images {
         width: 459px;
         height: 459px;
+        @include max($sm) {
+            width: 350px;
+            height: 350px;
+        }
+        @include max($s) {
+            width: 288px;
+            height: 288px;
+        }
     }
     &__slider-bottom {
         width: 410px;
         margin-left: 35px;
+        @include max($sm) {
+            width: 350px;
+            margin-left: 10px;
+        }
+        @include max($s) {
+            width: 235px;
+            margin-left: 37px;
+        }
     }
     &__item,
     &__photo {
         width: 82px !important;
         height: 82px;
         cursor: pointer;
+        @include max($sm) {
+            width: 60px !important;
+            height: 60px;
+        }
+        @include max($s) {
+            width: 30px !important;
+            height: 30px;
+        }
     }
     & .slick-current.slick-active {
         & .details__photo {
@@ -59,6 +98,10 @@
         height: 34px;
         fill: $global;
         transition: fill 0.3s ease-in;
+        @include max($s) {
+            width: 24px;
+            height: 24px;
+        }
     }
     &__tabs {
         max-width: 280px;
@@ -96,6 +139,9 @@
     &__rewies {
         display: flex;
         margin-bottom: 15px;
+        @include max($sm) {
+            margin-bottom: 5px;
+        }
     }
     &__subtitle {
         font-weight: 600;
@@ -119,22 +165,40 @@
         display: block;
         font-size: 18px;
         @include lineClamp;
-        -webkit-line-clamp: 1;
+        -webkit-line-clamp: 2;
         margin-bottom: 10px;
         &--whom {
             margin-bottom: 50px;
+            @include max($xl) {
+                margin-bottom: 10px;
+            }
+        }
+        @include max($sm) {
+            margin-bottom: 0;
+            font-size: 16px;
         }
     }
     &__holder {
         display: flex;
         align-items: center;
         margin-bottom: 35px;
+        @include max($lg) {
+            margin-bottom: 10px;
+        }
+        @include max($sm) {
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
     }
     & .jq-number {
         padding: 0 40px;
         background-color: #FFF6F2;
         border-radius: 39px;
         margin-right: 25px;
+        @include max($sm) {
+            margin-right: 10px;
+            padding: 0 30px;
+        }
     }    
     & .jq-number.focused > .jq-number__field {
         border: none;
@@ -157,6 +221,9 @@
         font-weight: 400;
         text-align: center;
         color: #333;
+        @include max($sm) {
+            height: 40px;
+        }
     }
     & .jq-number__spin {
         position: absolute;
@@ -211,11 +278,25 @@
         margin-bottom: 14px;
         font-size: 18px;
         text-decoration-line: line-through;
-        color: #8E8D6F
+        color: #8E8D6F;
+        @include max($xl) {
+            margin-bottom: 4px;
+        }
+        @include max($sm) {
+            margin-bottom: 0;
+        }
+    }
+    &__price {
+        @include max($sm) {
+            margin-bottom: 15px;
+        }
     }
     &__price-actual {
         font-size: 24px;
         color: #7EA048;
+        @include max($xl) {
+            font-size: 20px;
+        }
     }
     &__btn {
         padding: 23px 81px;
@@ -223,6 +304,14 @@
         font-weight: 700;
         font-size: 24px;
         border-radius: 37px;
+        @include max($xl) {
+            padding: 15px 35px;
+        }
+        @include max($sm) {
+            width: 100%;
+            padding: 11px 27px;
+            font-size: 20px;
+        }
     }
     &__heading {
         @include lineClamp;
@@ -230,12 +319,22 @@
         margin-bottom: 20px;
         font-size: 24px;
         font-weight: 600;
+        @include max($lg) {
+            margin-bottom: 0;
+        }
     }
     &__text {
         font-size: 18px;
         p {
             @include lineClamp;
             -webkit-line-clamp: 6;
+            @include max($xl) {
+                @include lineClamp;
+                -webkit-line-clamp: 10;
+            }
+        }
+        @include max($sm) {
+            font-size: 16px;
         }
     }
     & .reviews {
@@ -243,6 +342,9 @@
             font-weight: 600;
             font-size: 24px;
             margin-bottom: 20px;
+            @include max($lg) {
+                margin-bottom: 0;
+            }
         }
         &__subtitle {
             display: block;
@@ -256,6 +358,14 @@
             p {
                 @include lineClamp;
                 -webkit-line-clamp: 5;
+                @include max($sm) {
+                    @include lineClamp;
+                    -webkit-line-clamp: 8;
+                }
+            }
+            @include max($sm) {
+                font-size: 16px;
+                padding-left: 20px;
             }
         }
     }
